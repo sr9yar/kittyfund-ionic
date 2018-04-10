@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'LOGIN' | translate }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page10">
+  <div id="login-container2">
+    <form id="login-form12">
+      <h2 id="login-heading14" style="color:#000000;">
+        {{ 'PLEASE_ENTER' | translate }}
+      </h2>
+    </form>
+  </div>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm" id="login-form17">
+    <ion-item id="login-input9">
+      <ion-label>
+        {{ 'EMAIL' | translate }}
+      </ion-label>
+      <ion-input [(ngModel)]="data.email" type="email" placeholder="{{ 'EMAIL' | translate }}" name="email"></ion-input>
+    </ion-item>
+    <ion-item id="login-input16">
+      <ion-label>
+        {{ 'PASSWORD' | translate }}
+      </ion-label>
+      <ion-input [(ngModel)]="data.password" type="password" placeholder="{{ 'PASSWORD' | translate }}" name="password"></ion-input>
+    </ion-item>
+    <button id="login-button36" ion-button color="positive" block icon-right>
+      {{ 'LOGIN' | translate }}
+      <ion-icon name="log-in"></ion-icon>
+    </button>
+  </form>
+</ion-content>

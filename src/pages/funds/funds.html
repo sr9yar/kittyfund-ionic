@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'FUNDS' | translate }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="md-cash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="page4">
+
+  <form id="funds-form3">
+    <ion-item id="funds-toggle2">
+      <ion-label>
+        {{ 'ACTIVE_ONLY' | translate }}
+      </ion-label>
+      <ion-toggle (ionChange)="switchActive()" color="positive" checked="true"></ion-toggle>
+    </ion-item>
+    <button (click)="addFund()" id="funds-button35" ion-button color="positive" block icon-right> 
+      {{ 'CREATE_A_NEW_FUND' | translate }}
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </form>
+
+  <h1 id="funds-heading10" style="color:#000000;">
+    {{ 'CHOOSE_A_FUND' | translate }}
+  </h1>
+
+  <button *ngFor="let fund of getFunds()" (click)="openFund(fund)" id="funds-button-{{index}}" ion-button color="positive" block icon-right>
+    {{fund.name}}
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+
+</ion-content>

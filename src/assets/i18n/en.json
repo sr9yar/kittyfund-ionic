@@ -1,0 +1,85 @@
+{
+"APP_NAME":"KITTY FUND",
+"MENU":"Menu",
+"HOME":"Home",
+
+"PROFILE":"Profile",
+"SETTINGS":"Settings",
+"MY_LISTS":"My lists",
+"MY_FUNDS":"My funds",
+
+"LISTS":"Lists",
+"FUNDS":"Funds",
+
+"SEE_MY_FUNDS":"See my funds",
+"SEE_MY_LISTS":"See my lists",
+
+"LANGUAGE":"Language",
+
+
+"USER_DATA":"User data",
+"LOGIN":"Login",
+"USER_LOGIN":"Login",
+
+"EMAIL":"Email",
+"PASSWORD":"Password",
+"MOBILE":"Mobile",
+"NAME":"Name",
+"ITEM_NAME":"Name",
+"NAME_OF_THE_FUND":"Name of the fund",
+
+"SAVE":"Save",
+"LOGOUT":"Logout",
+
+
+"RECEIVE_EMAIL":"Receive email",
+"RECEIVE_SMS":"Receive SMS",
+
+
+"ACTIVE_ONLY":"Active only",
+"CHOOSE_A_LIST":"Choose a list",
+"ADD_A_NEW_LIST":"Add a new list",
+
+"GO_BACK":"Go back",
+
+"CREATE_A_NEW_FUND":"Create a new fund",
+
+"LIST_DETAILS":"List details",
+"ACTIVE":"Active",
+
+"SAVE_CHANGES":"Save changes",
+"DELETE_THE_LIST":"Delete the list",
+"CREATE_A_FUND_FROM_THIS_LIST":"Create a fund from this list",
+"PARTICIPANTS":"Participants",
+"ADD_A_NEW_PARTICIPANT":"Add a new participant",
+"REMOVE":"Remove",
+
+"CHOOSE_A_FUND":"Choose a fund",
+"FUND_DETAILS":"Fund details",
+
+"GOAL":"Goal",
+"EXPECTED":"Expected",
+"LEFT":"Left",
+"DEPOSITED":"Deposited",
+"SPENT":"Spent",
+"AVAILABLE":"Available",
+
+"EXPENSES":"Expenses",
+"DELETE_THIS_FUND":"Delete this fund",
+
+"PARTICIPANTS_LIST":"Participants list",
+
+"SEARCH_BY_NAME_OR_PHONE_NUMBER":"Search by name or phone number",
+
+"EXPENSES_LIST":"Expenses list",
+"SEARCH_BY_NAME":"Search by name",
+"ADD_A_NEW_EXPENSE":"Add a new expense",
+
+
+"PLEASE_ENTER":"Please, enter",
+"SUM":"Sum",
+
+"PLEASE_WAIT_LOADER":"Please, wait...",
+
+"0":"0"
+}

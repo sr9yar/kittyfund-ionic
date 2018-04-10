@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'FUND' | translate }}
+    </ion-title>
+	
+	<ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="md-cash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page7">
+  <form (ngSubmit)="onSubmit()" #fundForm="ngForm" id="fund-form11">
+    <button id="fund-button23" (click)="back()"  ion-button color="stable" block icon-left>
+      <ion-icon name="arrow-back"></ion-icon>
+      {{ 'GO_BACK' | translate }}
+    </button>
+	
+    <h1 id="fund-heading5" style="color:#000000;">
+      {{ 'FUND_DETAILS' | translate }}
+    </h1>
+	
+    <ion-item id="fund-toggle5">
+      <ion-label>
+        {{ 'ACTIVE' | translate }}
+      </ion-label>
+      <ion-toggle color="positive" [(ngModel)]="fund.active" name="active" checked="true"></ion-toggle>
+    </ion-item>
+    <ion-item id="fund-input15">
+      <ion-label>
+        {{ 'ITEM_NAME' | translate }}
+      </ion-label>
+      <ion-input type="text" placeholder="{{ 'NAME_OF_THE_FUND' | translate }}" [(ngModel)]="fund.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item id="fund-input23">
+      <ion-label>
+        {{ 'GOAL' | translate }}
+      </ion-label>
+      <ion-input (ionChange)="recalcExpected()" type="text" placeholder="{{ 'GOAL' | translate }}"  [(ngModel)]="fund.goal" name="goal"></ion-input>
+    </ion-item>
+    <ion-item id="fund-input24">
+      <ion-label>
+        {{ 'EXPECTED' | translate }}
+      </ion-label>
+      <ion-input type="text" placeholder="{{ 'EXPECTED' | translate }}"  [(ngModel)]="fund.expected" name="expected"></ion-input>
+    </ion-item>
+    <ion-item id="fund-input28">
+      <ion-label>
+        {{ 'LEFT' | translate }}
+      </ion-label>
+      <ion-input type="text" placeholder="{{ 'LEFT' | translate }}"  [(ngModel)]="fund.left" name="left"></ion-input>
+    </ion-item>
+    <ion-item id="fund-input25">
+      <ion-label>
+        {{ 'DEPOSITED' | translate }}
+      </ion-label>
+      <ion-input type="text" placeholder="{{ 'DEPOSITED' | translate }}"  [(ngModel)]="fund.deposited" name="deposited"></ion-input>
+    </ion-item>
+    <ion-item id="fund-input26">
+      <ion-label>
+       {{ 'SPENT' | translate }}
+      </ion-label>
+      <ion-input type="text" placeholder="{{ 'SPENT' | translate }}"  [(ngModel)]="fund.spent" name="spent"></ion-input>
+    </ion-item>
+    <ion-item id="fund-input27">
+      <ion-label>
+        {{ 'AVAILABLE' | translate }}
+      </ion-label>
+      <ion-input type="text" placeholder=" {{ 'AVAILABLE' | translate }}"  [(ngModel)]="fund.available" name="available"></ion-input>
+    </ion-item>
+    <button id="fund-button22" (click)="GoToParticipants(fund)" ion-button color="royal" block icon-right>
+      {{ 'PARTICIPANTS' | translate }}
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+    <button id="fund-button24" (click)="GoToExpenses(fund)" ion-button color="royal" block icon-right>
+      {{ 'EXPENSES' | translate }}
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+    <button id="fund-button16" type="button" (click)="onDelete()" ion-button color="assertive" block icon-right>
+      {{ 'DELETE_THIS_FUND' | translate }}
+      <ion-icon name="close"></ion-icon>
+    </button>
+
+    <button id="fund-button18" (click)="onSubmit()" ion-button color="positive" block icon-right>
+      {{ 'SAVE_CHANGES' | translate }}
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+  </form>
+</ion-content>

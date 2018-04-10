@@ -1,0 +1,86 @@
+{
+"APP_NAME":"СКЛАДЧИНА",
+"MENU":"Меню",
+"HOME":"Главная",
+
+"PROFILE":"Профиль",
+"SETTINGS":"Настройки",
+"MY_LISTS":"Мои списки",
+"MY_FUNDS":"Мои складчины",
+
+"LISTS":"Cписки",
+"FUNDS":"Cкладчины",
+
+"SEE_MY_FUNDS":"Посмотреть мои складчины",
+"SEE_MY_LISTS":"Посмотреть мои списки",
+
+"LANGUAGE":"Язык",
+
+
+"USER_DATA":"Данные пользователя",
+"LOGIN":"Вход",
+"USER_LOGIN":"Логин",
+
+"EMAIL":"Email",
+"PASSWORD":"Пароль",
+"MOBILE":"Мобильный",
+"NAME":"Имя",
+"ITEM_NAME":"Название",
+"NAME_OF_THE_FUND":"Название складчины",
+
+"SAVE":"Сохранить",
+"LOGOUT":"Выход",
+
+
+"RECEIVE_EMAIL":"Получать email",
+"RECEIVE_SMS":"Получать SMS",
+
+
+"ACTIVE_ONLY":"Только активные",
+"CHOOSE_A_LIST":"Выберите список",
+"ADD_A_NEW_LIST":"Добавить новый список",
+
+"GO_BACK":"Назад",
+
+"CREATE_A_NEW_FUND":"Создать новую складчину",
+
+"LIST_DETAILS":"Подробности списка",
+"ACTIVE":"Активный",
+
+"SAVE_CHANGES":"Сохранить изменения",
+"DELETE_THE_LIST":"Удалить этот список",
+"CREATE_A_FUND_FROM_THIS_LIST":"Создать складчину из этого списка",
+"PARTICIPANTS":"Участники",
+"ADD_A_NEW_PARTICIPANT":"Добавить нового участника",
+"REMOVE":"Удалить",
+
+"CHOOSE_A_FUND":"Выберите складчину",
+"FUND_DETAILS":"Подробности складчины",
+
+"GOAL":"Цель",
+"EXPECTED":"С каждого",
+"LEFT":"Осталось собрать",
+"DEPOSITED":"Внесено",
+"SPENT":"Потрачено",
+"AVAILABLE":"Доступно",
+
+"EXPENSES":"Расходы",
+"DELETE_THIS_FUND":"Удалить эту складчину",
+
+"PARTICIPANTS_LIST":"Список участников",
+
+"SEARCH_BY_NAME_OR_PHONE_NUMBER":"Искать по имени или телефону",
+
+"EXPENSES_LIST":"Список расходов",
+"SEARCH_BY_NAME":"Искать по названию",
+"ADD_A_NEW_EXPENSE":"Добавить новую трату",
+
+
+"PLEASE_ENTER":"Пожалуйста, осуществите вход",
+"SUM":"Сумма",
+
+
+"PLEASE_WAIT_LOADER":"Пожалуйста, подождите...",
+
+"0":"0"
+}

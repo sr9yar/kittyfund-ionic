@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'EXPENSES' | translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page9">
+  <form (ngSubmit)="onSubmit()" #expensesForm="ngForm" id="expenses-form15">
+
+  <button id="expenses-button31" (click)="back()" ion-button color="stable" block icon-left>
+    <ion-icon name="arrow-back"></ion-icon>
+    {{ 'GO_BACK' | translate }}
+  </button>
+
+    <h1 id="expenses-heading9" style="color:#000000;">
+      {{ 'EXPENSES' | translate }}
+    </h1>
+    <ion-item id="expenses-input33">
+      <ion-label>
+        {{ 'SPENT' | translate }}
+      </ion-label>
+      <ion-input type="text"  [(ngModel)]="fund.spent" placeholder="{{ 'SPENT' | translate }}" name="spent"></ion-input>
+    </ion-item>
+    <ion-item id="expenses-input32">
+      <ion-label>
+        {{ 'AVAILABLE' | translate }}
+      </ion-label>
+      <ion-input type="text"  [(ngModel)]="fund.available" placeholder="{{ 'AVAILABLE' | translate }}" name="available"></ion-input>
+    </ion-item>
+    <button id="expenses-button32" (click)="onSubmit()" ion-button color="positive" block icon-right>
+      {{ 'SAVE_CHANGES' | translate }}
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+    <ion-searchbar [(ngModel)]="searchTerm" placeholder="{{ 'SEARCH_BY_NAME' | translate }}" name="filter" id="expenses-search2"></ion-searchbar>
+
+
+
+  <h2 id="expenses-heading16" style="color:#000000;">
+   {{ 'EXPENSES_LIST' | translate }}
+  </h2>
+
+
+  <button (click)="addExpense()"  id="expenses-button34" type="button" ion-button color="calm" block icon-right>
+    {{ 'ADD_A_NEW_EXPENSE' | translate }}
+    <ion-icon name="add"></ion-icon>
+  </button>
+
+
+  <ion-card *ngFor="let item of getFilteredList(); let i = index; trackBy: trackExpense;" id="expenses-card-{{i}}">
+    <ion-list>
+
+        <ion-item id="expenses-input-name-{{i}}">
+          <ion-label>
+            {{ 'ITEM_NAME' | translate }}
+          </ion-label>
+          <ion-input [(ngModel)]="item.name" type="text" placeholder="{{ 'ITEM_NAME' | translate }}" name="name-{{i}}"></ion-input>
+        </ion-item>
+
+        <ion-item id="expenses-input-sum-{{i}}">
+          <ion-label>
+            {{ 'SUM' | translate }}
+          </ion-label>
+          <ion-input (ionChange)="recalcExpenses()" [(ngModel)]="item.sum" type="text" placeholder="{{ 'SUM' | translate }}" name="sum-{{i}}"></ion-input>
+        </ion-item>
+
+        <button (click)="remove(i)" id="expenses-remove-button-{{i}}" type="button" ion-button color="light" block icon-right>
+          {{ 'REMOVE' | translate }}
+          <ion-icon name="close"></ion-icon>
+        </button>
+
+    </ion-list>
+  </ion-card>
+ </form>
+</ion-content>

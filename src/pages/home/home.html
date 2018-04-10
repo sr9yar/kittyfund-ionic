@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'HOME' |  translate  }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <h1 id="home-heading12" style="color:#4D8FFF;font-weight:600;text-align:center;">
+    {{ 'APP_NAME' |  translate  }}
+  </h1>
+  <button id="home-button8" ion-button color="positive" block icon-right on-click="goToFunds()">
+    {{ 'SEE_MY_FUNDS' |  translate  }}
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+  <button id="home-button9" ion-button color="positive" block icon-right on-click="goToLists()">
+    {{ 'SEE_MY_LISTS' |  translate  }}
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+</ion-content>

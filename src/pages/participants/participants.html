@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'PARTICIPANTS' | translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="page8">
+ <form (ngSubmit)="onSubmit()" #participantsForm="ngForm" id="participants-form13">
+
+  <button id="participants-button26" (click)="back()" ion-button color="stable" block icon-left>
+    <ion-icon name="arrow-back"></ion-icon>
+    {{ 'GO_BACK' | translate }}
+  </button>
+  
+  
+  
+    <h1 id="participants-heading7" style="color:#000000;">
+      {{ 'PARTICIPANTS' | translate }}
+    </h1>
+    <ion-item id="participants-input29">
+      <ion-label>
+        {{ 'DEPOSITED' | translate }}
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="fund.deposited" placeholder="{{ 'DEPOSITED' | translate }}" name="deposited"></ion-input>
+    </ion-item>
+    <ion-item id="participants-input30">
+      <ion-label>
+        {{ 'LEFT' | translate }}
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="fund.left" placeholder="{{ 'LEFT' | translate }}" name="left"></ion-input>
+    </ion-item>
+    <ion-item id="participants-input31">
+      <ion-label>
+        {{ 'EXPECTED' | translate }}
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="fund.expected" placeholder="{{ 'EXPECTED' | translate }}" name="expected"></ion-input>
+    </ion-item>
+    <button id="participants-button27" (click)="onSubmit()" ion-button color="positive" block icon-right>
+      {{ 'SAVE_CHANGES' | translate }}
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+    <ion-searchbar [(ngModel)]="searchTerm" placeholder="{{ 'SEARCH_BY_NAME_OR_PHONE_NUMBER' | translate }}" name="filter" id="participants-search1"></ion-searchbar>
+
+  
+  
+  
+  <h1 id="participants-heading17" style="color:#000000;">
+    {{ 'PARTICIPANTS_LIST' | translate }}
+  </h1>
+
+  <button (click)="addParticipant()" id="participants-button30" type="button" ion-button color="calm" block icon-right>
+    {{ 'ADD_A_NEW_PARTICIPANT' | translate }}
+    <ion-icon name="add"></ion-icon>
+  </button>
+
+  <ion-card *ngFor="let participant of getFilteredList(); let i = index; trackBy: trackParticipant;" id="participants-card-{{i}}">
+
+        <ion-item id="participants-name-{{i}}">
+          <ion-label>
+            {{ 'NAME' | translate }}
+          </ion-label>
+          <ion-input [(ngModel)]="participant.name" name="people-name-{{i}}" type="text" placeholder="{{ 'NAME' | translate }}"></ion-input>
+        </ion-item>
+		
+        <ion-item id="participants-phone-{{i}}">
+          <ion-label>
+            {{ 'MOBILE' | translate }}
+          </ion-label>
+          <ion-input [(ngModel)]="participant.phone" name="people-phone-{{i}}" type="text" placeholder=" {{ 'MOBILE' | translate }}"></ion-input>
+        </ion-item>
+		
+        <ion-item id="participants-deposited-{{i}}">
+          <ion-label>
+            {{ 'DEPOSITED' | translate }}
+          </ion-label>
+          <ion-input (ionChange)="recalcLeft()" [(ngModel)]="participant.deposited" name="people-deposited-{{i}}" type="text" placeholder="{{ 'DEPOSITED' | translate }}"></ion-input>
+        </ion-item>
+		
+        <ion-item id="participants-left-{{i}}">
+          <ion-label>
+            {{ 'LEFT' | translate }}
+          </ion-label>
+          <ion-input [(ngModel)]="participant.left" name="people-left-{{i}}" type="text" placeholder="{{ 'LEFT' | translate }}"></ion-input>
+        </ion-item>
+
+        <button (click)="remove(i)" type="button" id="participants-button-{{i}}" ion-button color="light" block icon-right>
+          {{ 'REMOVE' | translate }}
+          <ion-icon name="close"></ion-icon>
+        </button>
+
+   </ion-card>
+
+  </form>
+</ion-content>

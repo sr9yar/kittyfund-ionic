@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'SETTINGS' | translate }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+  <form id="settings-form6" (ngSubmit)="onSubmit()" #settingsForm="ngForm">
+  <h1 id="settings-heading15" style="color:#000000;">
+    {{ 'SETTINGS' | translate }}
+  </h1>
+
+    <ion-item name="email" id="settings-checkbox2">
+      <ion-label>
+        {{ 'RECEIVE_EMAIL' | translate }}
+      </ion-label>
+      <ion-checkbox [(ngModel)]="user.data.user.settings.receive_email" name="receive_email"></ion-checkbox>
+    </ion-item>
+    <ion-item name="sms" id="settings-checkbox1">
+      <ion-label>
+        {{ 'RECEIVE_SMS' | translate }}
+      </ion-label>
+      <ion-checkbox [(ngModel)]="user.data.user.settings.receive_sms" name="receive_sms"></ion-checkbox>
+    </ion-item>
+	
+	<ion-list radio-group [(ngModel)]="user.data.user.settings.language" name="language" (ionChange)="changeLanguageEvent()">
+
+	  <ion-list-header>
+		{{ 'LANGUAGE' | translate }}
+	  </ion-list-header>
+
+	  <ion-item>
+		<ion-label>English</ion-label>
+		<ion-radio value="en"></ion-radio>
+	  </ion-item>
+
+	  <ion-item>
+		<ion-label>Русский</ion-label>
+		<ion-radio value="ru"></ion-radio>
+	  </ion-item>
+
+
+	</ion-list>
+	
+	
+    <button id="settings-button6" ion-button color="positive" block icon-right>
+      {{ 'SAVE' | translate }}
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+  </form>
+</ion-content>

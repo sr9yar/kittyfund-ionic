@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'LISTS' | translate }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="list-box"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page3">
+  <form id="lists-form4">
+    <ion-item id="lists-toggle3">
+      <ion-label>
+        {{ 'ACTIVE_ONLY' | translate }}
+      </ion-label>
+      <ion-toggle (ionChange)="switchActive()" color="positive" checked="true"></ion-toggle>
+    </ion-item>
+    <button (click)="addList()" id="lists-button11" ion-button color="positive" block icon-right>
+      {{ 'ADD_A_NEW_LIST' | translate }}
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <h1 id="lists-heading2" style="color:#000000;">
+      {{ 'CHOOSE_A_LIST' | translate }}
+    </h1>
+	
+	<button *ngFor="let list of getLists()" (click)="openList(list)" id="lists-button-{{index}}" ion-button color="positive" block icon-right>
+    {{list.name}}
+    <ion-icon name="arrow-forward"></ion-icon>
+	</button>
+
+  </form>
+</ion-content>

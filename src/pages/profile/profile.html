@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'PROFILE' | translate }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <form (ngSubmit)="onSubmit()" #profileForm="ngForm" id="profile-form5">
+    <h1 id="profile-heading11" style="color:#000000;">
+      {{ 'USER_DATA' | translate }}
+    </h1>
+    <ion-item id="profile-input1">
+      <ion-label>
+        {{ 'USER_LOGIN' | translate }}
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="user.data.user.login" placeholder="{{ 'USER_LOGIN' | translate }}" name="login"></ion-input>
+    </ion-item>
+	
+	<ion-item id="profile-input-email-1">
+      <ion-label>
+        {{ 'EMAIL' | translate }}
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="user.data.user.email" placeholder="{{ 'EMAIL' | translate }}" name="email"></ion-input>
+    </ion-item>
+	
+    <ion-item id="profile-input3">
+      <ion-label>
+        {{ 'PASSWORD' | translate }}
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="user.data.user.password" placeholder="{{ 'PASSWORD' | translate }}" name="password"></ion-input>
+    </ion-item>
+    <ion-item id="profile-input4">
+      <ion-label>
+        {{ 'MOBILE' | translate }}
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="user.data.user.phone" placeholder="{{ 'MOBILE' | translate }}" name="phone"></ion-input>
+    </ion-item>
+    <ion-item id="profile-input2">
+      <ion-label>
+       {{ 'NAME' | translate }}
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="user.data.user.name" placeholder="{{ 'NAME' | translate }}" name="name"></ion-input>
+    </ion-item>
+
+  <button id="profile-button5" ion-button color="positive" block icon-right>
+    {{ 'SAVE' | translate }}
+    <ion-icon name="checkmark"></ion-icon>
+  </button>
+  <button (click)="logout()" type="button" id="profile-button7" ion-button color="positive" block icon-right>
+    {{ 'LOGOUT' | translate }}
+    <ion-icon name="log-out"></ion-icon>
+  </button>
+  
+    </form>
+</ion-content>

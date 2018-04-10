@@ -1,0 +1,35 @@
+<ion-menu [content]="mainContent">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        {{ 'MENU' | translate }}
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content id="side-menu21">
+    <ion-list id="menu-list1">
+      <ion-item color="none" menuClose="" on-click="goToHome()" id="menu-list-item1">
+        {{ 'HOME' | translate }}
+        <ion-icon name="home" item-right></ion-icon>
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToProfile()" id="menu-list-item2">
+        {{ 'PROFILE' | translate }}
+        <ion-icon name="person" item-right></ion-icon>
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToSettings()" id="menu-list-item7">
+        {{ 'SETTINGS' | translate }}
+        <ion-icon name="settings" item-right></ion-icon>
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToLists()" id="menu-list-item3">
+        {{ 'MY_LISTS' | translate }}
+        <ion-icon name="list-box" item-right></ion-icon>
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToFunds()" id="menu-list-item4">
+        {{ 'MY_FUNDS' | translate }}
+        <ion-icon name="md-cash" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>

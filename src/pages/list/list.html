@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'LIST' | translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page6">
+  <form (ngSubmit)="onSubmit()" #listForm="ngForm" id="list-form9">
+
+  <button (click)="back()" id="list-button25" ion-button color="stable" block icon-left>
+    <ion-icon name="arrow-back"></ion-icon>
+    {{ 'GO_BACK' | translate }}
+  </button>
+
+    <h1 id="list-heading3" style="color:#000000;">
+      {{ 'LIST_DETAILS' | translate }}
+    </h1>
+	
+    <ion-item id="list-input12">
+      <ion-label>
+        {{ 'NAME' | translate }}
+      </ion-label>
+      <ion-input type="text" placeholder="Name of the List" [(ngModel)]="list.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item id="list-toggle4">
+      <ion-label>
+        {{ 'ACTIVE' | translate }}
+      </ion-label>
+      <ion-toggle [(ngModel)]="list.active" name="active" color="positive" checked="true"></ion-toggle>
+    </ion-item>
+    <button (click)="onSubmit()" id="list-button14" ion-button color="positive" block icon-right>
+      {{ 'SAVE_CHANGES' | translate }}
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+    <button (click)="onDelete()" type="button" id="list-button28" ion-button color="assertive" block icon-right>
+      {{ 'DELETE_THE_LIST' | translate }}
+      <ion-icon name="close"></ion-icon>
+    </button>
+    <button (click)="createFund()" type="button" id="list-button15" ion-button color="royal" block icon-right>
+      {{ 'CREATE_A_FUND_FROM_THIS_LIST' | translate }}
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+
+  <h2 id="list-heading4" style="color:#000000;">
+    {{ 'PARTICIPANTS' | translate }}
+  </h2>
+  
+  <button (click)="addParticipant()" type="button" id="list-button13" ion-button color="calm" block icon-right>
+    {{ 'ADD_A_NEW_PARTICIPANT' | translate }}
+    <ion-icon name="add"></ion-icon>
+  </button>
+  
+  <ion-card *ngFor="let participant of list.people;let i = index; trackBy: trackParticipant" id="list-participant-card-{{i}}">
+    <ion-list>
+
+        <ion-item id="list-input-name-{{i}}">
+          <ion-label>
+            {{ 'NAME' | translate }}
+          </ion-label>
+          <ion-input [(ngModel)]="participant.name" name="people-name-{{i}}" type="text" placeholder="{{ 'NAME' | translate }}"></ion-input>
+        </ion-item>
+
+        <ion-item id="list-input-phone-{{i}}">
+          <ion-label>
+            {{ 'MOBILE' | translate }}
+          </ion-label>
+          <ion-input [(ngModel)]="participant.phone" name="people-phone-{{i}}" type="text" placeholder="{{ 'MOBILE' | translate }}"></ion-input>
+        </ion-item>
+
+        <button (click)="removeParticipant(i)" type="button" id="list-button-remove-{{i}}" ion-button color="light" block icon-right>
+          {{ 'REMOVE' | translate }}
+          <ion-icon name="close"></ion-icon>
+        </button>
+
+    </ion-list>
+  </ion-card>
+
+  
+  </form>
+</ion-content>
